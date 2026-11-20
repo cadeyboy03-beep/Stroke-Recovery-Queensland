@@ -95,3 +95,10 @@ document.querySelectorAll('.chips a,.chips2 a,.btn,.pill').forEach(function(a){a
  var h=a.getAttribute('href');if(R||!h||h.charAt(0)==='#'||h.indexOf('tel:')===0||h.indexOf('mailto:')===0||e.metaKey||e.ctrlKey||e.shiftKey||a.target==='_blank')return;
  e.preventDefault();a.classList.add('go');setTimeout(function(){document.body.classList.add('leaving')},120);setTimeout(function(){location.href=h},380);});});
 window.addEventListener('pageshow',function(){document.body.classList.remove('leaving')});})();
+
+;(function(){var mq=window.matchMedia&&matchMedia('(max-width:860px)');
+document.querySelectorAll('footer .fg>div h4').forEach(function(h){h.setAttribute('role','button');h.setAttribute('tabindex','0');
+ function t(){if(mq&&mq.matches){var o=h.parentNode.classList.toggle('open');h.setAttribute('aria-expanded',o)}}
+ h.addEventListener('click',t);h.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();t()}})});
+document.querySelectorAll('.grid.g3,.grid.g4,.grid.g2,.tiles,.why5').forEach(function(g){if(g.children.length>1&&!(g.previousElementSibling&&g.previousElementSibling.classList.contains('swipe-hint'))){var s=document.createElement('div');s.className='swipe-hint';s.textContent='Swipe to see more';g.parentNode.insertBefore(s,g)}});
+})();

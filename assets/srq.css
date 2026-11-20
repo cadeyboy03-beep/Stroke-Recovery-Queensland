@@ -320,6 +320,49 @@ body.leaving main,body.leaving .x-hero,body.leaving section{transition:opacity .
 .card h3 a::after{content:"";position:absolute;inset:0;border-radius:inherit}
 .card a:not(h3 a){position:relative;z-index:1}
 
+/* ===== page photos in the page header ===== */
+.hero.has-img .w{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(24px,4vw,56px);align-items:center}
+.hpic{position:relative}
+.hpic img{width:100%;aspect-ratio:9/6.4;height:auto;object-fit:cover;display:block;border-radius:28px;box-shadow:0 28px 60px -28px rgba(49,16,27,.55);background:#f8e5eb}
+.hpic::before{content:"";position:absolute;inset:14px -14px -14px 14px;border-radius:30px;background:linear-gradient(135deg,#f1d3dc,#eeebe7);z-index:-1}
+/* ===== homepage photos: inset with soft rounded corners ===== */
+.x-hi,.x-si{padding:clamp(14px,2.6vw,34px);background:transparent}
+.x-hi img,.x-si img{border-radius:30px;box-shadow:0 30px 64px -30px rgba(49,16,27,.6)}
+.x-hero{background:#f8e5eb}.x-hero .x-hi{background:transparent}
+.x-split .x-si{display:flex}
+@media(max-width:860px){
+ .hero.has-img .w{grid-template-columns:1fr;gap:20px}
+ .hpic{order:-1}.hpic img{aspect-ratio:16/8;border-radius:20px}.hpic::before{display:none}
+ .x-hi,.x-si{padding:12px 16px 0;height:auto!important}
+ .x-hi img,.x-si img{height:220px!important;border-radius:22px}
+ /* swipeable rows instead of long stacks */
+ .grid.g3,.grid.g4,.grid.g2,.tiles,.why5{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px!important;
+   margin:0 -16px;padding:4px 16px 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch;grid-template-columns:none!important}
+ .grid.g3::-webkit-scrollbar,.grid.g4::-webkit-scrollbar,.grid.g2::-webkit-scrollbar,.tiles::-webkit-scrollbar,.why5::-webkit-scrollbar{display:none}
+ .grid.g3>*,.grid.g4>*,.grid.g2>*,.tiles>*,.why5>*{flex:0 0 82%;scroll-snap-align:start;min-width:0}
+ .swipe-hint{display:flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:#5e454d;margin:-2px 0 6px}
+ .swipe-hint::after{content:"\2192";animation:nudge 1.4s ease-in-out infinite}
+ @keyframes nudge{50%{transform:translateX(5px)}}
+ /* locations page: the map list already shows every area */
+ #regions{display:none}
+ /* tighter spacing */
+ .sec{padding:44px 0!important}
+ .sec h2{margin-bottom:12px}
+ /* footer: tap a heading to open it */
+ footer .fg>div:has(h4) a{display:none}
+ footer .fg>div.open a{display:block}
+ footer .fg>div:has(h4){border-bottom:1px solid rgba(255,255,255,.14)}
+ footer h4{cursor:pointer;display:flex;justify-content:space-between;align-items:center;margin:0!important;padding:14px 0}
+ footer h4::after{content:"+";font-size:1.2rem;font-weight:400}
+ footer .fg>div.open h4::after{content:"\2013"}
+ footer .fg{gap:0!important}
+ .tw .ct{min-width:600px!important;font-size:.86rem}.ct th,.ct td{padding:10px 12px}
+ #locations .rlist{display:none}
+ .m-hide{display:none!important}
+ #locations .mapinfo p{display:none}
+}
+@media(min-width:861px){.swipe-hint{display:none}}
+
 /* ================= Burgundy: one hover colour family =================
    M  #5e152c  burgundy (base)
    ML #8f2a4a  lighter burgundy (hover fills)
