@@ -362,6 +362,8 @@ body.leaving main,body.leaving .x-hero,body.leaving section{transition:opacity .
  #locations .mapinfo p{display:none}
 }
 @media(min-width:861px){.swipe-hint{display:none}}
+/* phone: full-width region map */
+@media(max-width:820px){.rwrap{grid-template-columns:1fr;gap:16px}.rwrap .mapbox{padding:6px;border-radius:18px}.rmap .pl{font-size:12.5px!important}.rmap circle{transform-box:fill-box;transform-origin:center}}
 
 /* ================= Burgundy: one hover colour family =================
    M  #5e152c  burgundy (base)
