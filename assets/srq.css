@@ -278,9 +278,6 @@ html.hc .grid>.card,html.hc .cm>div,html.hc .stat.dk{border-color:#000}
 .chips a:active{transform:translateY(0) scale(.96);transition-duration:.08s}
 .chips a .rip{position:absolute;border-radius:50%;background:rgba(255,255,255,.55);transform:scale(0);animation:rip .6s ease-out forwards;pointer-events:none;z-index:0}
 @keyframes rip{to{transform:scale(4);opacity:0}}
-.chips a.go{animation:go .35s ease forwards}
-@keyframes go{50%{transform:translateY(-3px) scale(1.04)}100%{transform:translateY(-3px) scale(1)}}
-body.leaving main,body.leaving .x-hero,body.leaving section{transition:opacity .28s ease,transform .28s ease;opacity:0;transform:translateY(8px)}
 @media (prefers-reduced-motion:reduce){.chips a,.chips a::before,.chips a::after{transition:none}.chips a.go,.chips a .rip{animation:none}body.leaving main,body.leaving section{transition:none;opacity:1;transform:none}}
 
 /* ---- why-these-areas cards ---- */
