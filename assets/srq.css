@@ -433,3 +433,8 @@ footer a:hover,footer a:focus-visible{text-decoration:none!important;background:
 .tlist li{background:#fff;border:1px solid var(--line);border-left:4px solid #5e152c;border-radius:12px;padding:14px 16px;line-height:1.5}
 .tlist li b{color:#31101b}
 .small-note{font-size:.9rem;color:var(--mu);margin-top:16px}
+
+.why .card h3{font-size:1.12rem;line-height:1.35}
+.why .src{margin-top:auto;font-size:.9rem;font-weight:600}
+.why .card{display:flex;flex-direction:column}
+.why .src{padding-top:12px}
